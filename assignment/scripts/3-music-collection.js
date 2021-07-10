@@ -7,16 +7,16 @@ let tracksTheWhiteAlbum = [];
 let tracksKeepItLikeaSecret = [];
 let tracksRevolver = [];
 let tracksTapestry = [];
-
+let tracksEditedWhiteAlbum = [];
 
 
 //creating function to add individual tracks to tracklist arrays, and assigning the tracks properties of 'name' and 'duration'
-function addToTracks(tracks, name, duration, designation){
+function addToTracks(tracks, name, duration, designation) {
   let track = {
     name: name,
     duration: duration,
     designation: designation
-    }
+  }
   tracks.push(track);
   return track;
 }
@@ -47,36 +47,36 @@ addToTracks(tracksKidA, 'Motion Picture Soundtrack', '6:59');
 //again
 //the designate property in the tracks object will eventually serve a function
 //which will determine which tracks the band might have kept and discarded if they were trying to make the best album possible out of this group.
-addToTracks(tracksTheWhiteAlbum, 'Back In the USSR','2:43', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Dear Prudence','3:54', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Glass Onion','2:17', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Obladi Oblada','3:09', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Wild Honey Pie','0:53', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Buffalo Bill','3:14', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'While My Guitar Gently Weeps','4:45','keep');
-addToTracks(tracksTheWhiteAlbum, 'Happiness Is A Warm Gun','2:43','keep');
-addToTracks(tracksTheWhiteAlbum, 'Martha My Dear','2:28', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'So Tired','2:03', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Blackbird','2:18', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Piggies','2:03','discard');
-addToTracks(tracksTheWhiteAlbum, 'Rocky Raccoon','3:32', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Dont Pass Me By','3:46','discard');
-addToTracks(tracksTheWhiteAlbum, 'Do It In the Road','1:41', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'I Will','1:45', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Julia','2:54', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Birthday','2:43', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Yer Blues','4:12', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Mother Natures Son','2:46', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Everybodys Got Something To Hide','2:25', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Sexy Sadie','3:14', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Helter Skelter','3:39', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Long Long Long','3:05', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Revolution 1','4:15', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Honey Pie','2:41', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Savoy Truffle','2:54', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Cry Baby Cry','3:02', 'keep');
-addToTracks(tracksTheWhiteAlbum, 'Revolution 9','8:23', 'discard');
-addToTracks(tracksTheWhiteAlbum, 'Good Night','3:12', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Back In the USSR', '2:43', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Dear Prudence', '3:54', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Glass Onion', '2:17', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Obladi Oblada', '3:09', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Wild Honey Pie', '0:53', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Buffalo Bill', '3:14', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'While My Guitar Gently Weeps', '4:45', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Happiness Is A Warm Gun', '2:43', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Martha My Dear', '2:28', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'So Tired', '2:03', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Blackbird', '2:18', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Piggies', '2:03', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Rocky Raccoon', '3:32', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Dont Pass Me By', '3:46', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Do It In the Road', '1:41', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'I Will', '1:45', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Julia', '2:54', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Birthday', '2:43', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Yer Blues', '4:12', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Mother Natures Son', '2:46', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Everybodys Got Something To Hide', '2:25', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Sexy Sadie', '3:14', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Helter Skelter', '3:39', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Long Long Long', '3:05', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Revolution 1', '4:15', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Honey Pie', '2:41', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Savoy Truffle', '2:54', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Cry Baby Cry', '3:02', 'keep');
+addToTracks(tracksTheWhiteAlbum, 'Revolution 9', '8:23', 'discard');
+addToTracks(tracksTheWhiteAlbum, 'Good Night', '3:12', 'discard');
 
 //again
 addToTracks(tracksKeepItLikeaSecret, 'The Plan', '3:29')
@@ -127,13 +127,13 @@ function addToCollection(title, artist, yearPublished, tracks) {
   let album = {
     title: title,
     artist: artist,
-    yearPublished:yearPublished,
+    yearPublished: yearPublished,
     tracks: tracks
 
 
-  }//pushing the album to the collection array and returning the result
-collection.push(album);
-return album;
+  } //pushing the album to the collection array and returning the result
+  collection.push(album);
+  return album;
 
 
 }
@@ -142,17 +142,26 @@ console.log(collection);
 console.log(addToCollection('Marquee Moon', 'Television', '1977', tracksMarqueeMoon));
 console.log(addToCollection('Kid A', 'Radiohead', '2000', tracksKidA));
 console.log(addToCollection('The White Album', 'The Beatles', '1968', tracksTheWhiteAlbum));
-console.log(addToCollection('Keep It Like a Secret', 'Built to Spill', '1999', tracksKeepItLikeaSecret ));
+console.log(addToCollection('Keep It Like a Secret', 'Built to Spill', '1999', tracksKeepItLikeaSecret));
 console.log(addToCollection('Revolver', 'The Beatles', '1966', tracksRevolver));
 console.log(addToCollection('Tapestry', 'Carole King', '1971', tracksTapestry));
+console.log(addToCollection('The Edited White Album', 'The Beatles', '2021', tracksEditedWhiteAlbum));
 
-console.log(collection);
+//testing this function here just to see what it does
+console.log(search());
+
+
+
+
+
+
+
 //creating a showCollection function to list the items we've added, including all their property information
 function showCollection(collection) {
 
   console.log(`There are ${collection.length} records in this collection:`);
-//looping through the collection and logging the items as outlined in Readme.md
-  for (let items of collection){
+  //looping through the collection and logging the items as outlined in Readme.md
+  for (let items of collection) {
     console.log(`${items.title}, by ${items.artist}, published in ${items.yearPublished}`);
     for (let i = 0; i < items.tracks.length; i++) {
       console.log(`${i+1}. ${items.tracks[i].name}: ${items.tracks[i].duration}`);
@@ -164,17 +173,36 @@ function showCollection(collection) {
 showCollection(collection);
 
 
+
+//running an experimental function to reassign tracks to a new array based on designation they were given,
+//goal is to create an edited version of an album in the collection
+function findByDesignation(designation) {
+
+
+  for (let track of tracksTheWhiteAlbum) {
+    if (track.designation === designation) {
+      tracksEditedWhiteAlbum.push(track);
+
+
+    }
+  }
+  console.log('This tracklist shows an edited version of the White Album, with egregious filler tracks and many cringey McCartney genre-appropriation attempts removed:');
+  console.log(tracksEditedWhiteAlbum); //remove this log once you've figured it out.
+
+}
+findByDesignation('keep');
+
 //creating a findByArtist function which inputs an artist name and returns any matches found after looping through the collection
 function findByArtist(artist) {
   let searchResult = [];
-  for (let item of collection){
-    if (item.artist === artist){
-    searchResult.push(item);
-    console.log('Artist match found');
+  for (let item of collection) {
+    if (item.artist === artist) {
+      searchResult.push(item);
+      console.log('Artist match found');
     }
   }
 
-console.log(searchResult);
+  console.log(searchResult);
 }
 //testing the function with an artist that is represented in the collection, and with one that is not.
 findByArtist('The Beatles');
@@ -192,12 +220,11 @@ function search(artist, year, trackName) {
   //if the none of the search parameters are found to match in the collection, the search returns an empty array.
   if (searchObject.searchArtist === undefined && searchObject.searchYear === undefined && searchObject.trackName === undefined) {
     return collection;
-  }
-  else {
-    for (let item of collection){
-      if (searchObject.searchYear === item.yearPublished && searchObject.searchArtist === item.artist){
-        for (let i = 0; i < item.tracks.length; i ++){
-          if (searchObject.trackName === item.tracks.name){
+  } else {
+    for (let item of collection) {
+      if (searchObject.searchYear === item.yearPublished && searchObject.searchArtist === item.artist) {
+        for (let i = 0; i < item.tracks.length; i++) {
+          if (searchObject.trackName === item.tracks.name) {
             results.push(item.artist);
             results.push(item.tracks[i].name);
           }
@@ -205,7 +232,7 @@ function search(artist, year, trackName) {
       }
     }
   }
-return results;
+  return results;
 }
 //testing for parameters that will not be found in the collection
 console.log(search('Ray Charles', '1957'));
@@ -213,30 +240,3 @@ console.log(search('Ray Charles', '1957'));
 console.log(search());
 //a commented test for parameters that will be found in the collection; it looks horrible when printed.
 //console.log(search('Carole King', '1971'))
-
-function findByDesignation(designation){
-  let editedWhiteAlbum = []
-
-   for (let track of tracksTheWhiteAlbum){
-     if (track.designation === designation){
-       editedWhiteAlbum.push(track);
-     }
-   }
-console.log(editedWhiteAlbum);
-}
-
-(findByDesignation('keep'));
-
-
-//function showUpdatedWhiteAlbum(editedWhiteAlbum){
-
-//console.log('This amended White Album is definitely the best, do not argue:');
-
-  //for (let items of editedWhiteAlbum){
-  //  console.log(`${items.title}, by ${items.artist}, published in ${items.yearPublished}`);
-  //  for (let i = 0; i < items.tracks.length; i++) {
-  //    console.log(`${i+1}. ${items.tracks[i].name}: ${items.tracks[i].duration}`);
-
-//  }
-//}
-//Running the function
