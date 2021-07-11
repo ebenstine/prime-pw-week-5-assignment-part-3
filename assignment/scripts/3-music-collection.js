@@ -31,7 +31,7 @@ addToTracks(tracksMarqueeMoon, 'Elevation', '5:08');
 addToTracks(tracksMarqueeMoon, 'Guiding Light', '5:36');
 addToTracks(tracksMarqueeMoon, 'Prove It', '5:04');
 addToTracks(tracksMarqueeMoon, 'Torn Curtain', '7:00');
-
+console.log(tracksMarqueeMoon);
 //again
 addToTracks(tracksKidA, 'Everything In Its Right Place', '4:11');
 addToTracks(tracksKidA, 'Kid A', '4:45');
@@ -43,10 +43,12 @@ addToTracks(tracksKidA, 'In Limbo', '3:31');
 addToTracks(tracksKidA, 'Idioteque', '5:09');
 addToTracks(tracksKidA, 'Morning Bell', '4:36');
 addToTracks(tracksKidA, 'Motion Picture Soundtrack', '6:59');
-
+console.log(tracksKidA);
 //again
-//the designate property in the tracks object will eventually serve a function
-//which will determine which tracks the band might have kept and discarded if they were trying to make the best album possible out of this group.
+//The designate property in the tracks object will eventually serve a function
+//which will determine which tracks the band might have kept and discarded if they had tried to - or agreed upon how to - eliminate the weaker material.
+//this property and the coming function will only be used for this album right now, although it does clutter up the logging of tracklists for the other albums.
+//I could work around that somehow I'm sure but didn't figure out how.
 addToTracks(tracksTheWhiteAlbum, 'Back In the USSR', '2:43', 'discard');
 addToTracks(tracksTheWhiteAlbum, 'Dear Prudence', '3:54', 'keep');
 addToTracks(tracksTheWhiteAlbum, 'Glass Onion', '2:17', 'keep');
@@ -77,7 +79,7 @@ addToTracks(tracksTheWhiteAlbum, 'Savoy Truffle', '2:54', 'discard');
 addToTracks(tracksTheWhiteAlbum, 'Cry Baby Cry', '3:02', 'keep');
 addToTracks(tracksTheWhiteAlbum, 'Revolution 9', '8:23', 'discard');
 addToTracks(tracksTheWhiteAlbum, 'Good Night', '3:12', 'discard');
-
+console.log(tracksTheWhiteAlbum);
 //again
 addToTracks(tracksKeepItLikeaSecret, 'The Plan', '3:29')
 addToTracks(tracksKeepItLikeaSecret, 'Center Of The Universe', '2:43')
@@ -89,7 +91,7 @@ addToTracks(tracksKeepItLikeaSecret, 'Else', '4:09')
 addToTracks(tracksKeepItLikeaSecret, 'You Were Right', '4:45')
 addToTracks(tracksKeepItLikeaSecret, 'Temporarily Blind', '4:48')
 addToTracks(tracksKeepItLikeaSecret, 'Broken Chairs', '8:40')
-
+console.log(tracksKeepItLikeaSecret);
 
 //again
 addToTracks(tracksRevolver, 'Taxman', '2:41');
@@ -106,7 +108,9 @@ addToTracks(tracksRevolver, 'Doctor Robert', '2:17');
 addToTracks(tracksRevolver, 'I Want To Tell You', '2:32');
 addToTracks(tracksRevolver, 'Got To Get You Into My Life', '2:33');
 addToTracks(tracksRevolver, 'Tomorrow Never Knows', '2:58');
+console.log(tracksRevolver);
 //and again
+
 addToTracks(tracksTapestry, 'I Feel The Earth Move', '3:00');
 addToTracks(tracksTapestry, 'So Far Away', '3:56');
 addToTracks(tracksTapestry, 'Its Too Late', '3:54');
@@ -119,10 +123,10 @@ addToTracks(tracksTapestry, 'Will You Love Me Tomorrow', '4:13');
 addToTracks(tracksTapestry, 'Smackwater Jack', '3:43');
 addToTracks(tracksTapestry, 'Tapestry', '3:15');
 addToTracks(tracksTapestry, 'Natural Woman', '3:49');
-
+console.log(tracksTapestry);
 //endaddToTracks
 
-//creating a funciton to add albums to the collection with properties of title, artist, year published, and tracks
+//Next, creating a function to add albums to the collection with properties of title, artist, year published, and tracks
 function addToCollection(title, artist, yearPublished, tracks) {
   let album = {
     title: title,
@@ -137,8 +141,8 @@ function addToCollection(title, artist, yearPublished, tracks) {
 
 
 }
-console.log(collection);
-//testing the addToCollection function by inputting the object properties and the previously established track arrays
+console.log(collection, 'A Mix of Most-Loved Albums');
+//Testing the addToCollection function by inputting the object properties and the previously established track arrays
 console.log(addToCollection('Marquee Moon', 'Television', '1977', tracksMarqueeMoon));
 console.log(addToCollection('Kid A', 'Radiohead', '2000', tracksKidA));
 console.log(addToCollection('The White Album', 'The Beatles', '1968', tracksTheWhiteAlbum));
@@ -146,21 +150,15 @@ console.log(addToCollection('Keep It Like a Secret', 'Built to Spill', '1999', t
 console.log(addToCollection('Revolver', 'The Beatles', '1966', tracksRevolver));
 console.log(addToCollection('Tapestry', 'Carole King', '1971', tracksTapestry));
 console.log(addToCollection('The Edited White Album', 'The Beatles', '2021', tracksEditedWhiteAlbum));
-
-//testing this function here just to see what it does
-console.log(search());
-
-
-
-
-
-
-
-//creating a showCollection function to list the items we've added, including all their property information
+//Timeouthis will end up logging a redundant copy of the collection in the log but for the assignment purpose, it was successful.
+//Testing this function here just to see what it does - it should print the collection.
+//Tonsole.log(search());
+//Commented it out just to clean up the log.
+//Creating a showCollection function to list the items we've added, including all their property information in a neatly ordered way.
 function showCollection(collection) {
 
   console.log(`There are ${collection.length} records in this collection:`);
-  //looping through the collection and logging the items as outlined in Readme.md
+  //Looping through the collection and logging the items as outlined in Readme.md
   for (let items of collection) {
     console.log(`${items.title}, by ${items.artist}, published in ${items.yearPublished}`);
     for (let i = 0; i < items.tracks.length; i++) {
@@ -169,30 +167,31 @@ function showCollection(collection) {
     }
   }
 }
-//Running the function
+//Testing the function.
 showCollection(collection);
 
 
 
-//running an experimental function to reassign tracks to a new array based on designation they were given,
-//goal is to create an edited version of an album in the collection
+//Running an experimental function to separate and reassign tracks to a new array based on the designation they are given;
+//the goal is to log a new array of tracks selected from the original album.
 function findByDesignation(designation) {
-
 
   for (let track of tracksTheWhiteAlbum) {
     if (track.designation === designation) {
       tracksEditedWhiteAlbum.push(track);
-
-
     }
   }
-  console.log('This tracklist shows an edited version of the White Album, with egregious filler tracks and many cringey McCartney genre-appropriation attempts removed:');
-  console.log(tracksEditedWhiteAlbum); //remove this log once you've figured it out.
+  //This tracklist shows an edited version of the White Album, with egregious filler tracks and many cringey McCartney genre-appropriation attempts removed.
+  console.log(tracksEditedWhiteAlbum); //!!!reminder to remove this log once I've figured out why the showCollection isn't working for this (I haven't).
 
 }
 findByDesignation('keep');
+//I intended to have this tracklist print like the others do following the 'showCollection' syntax and logic,
+//but after trying a fair bit I could not figure it out.  I would welcome a tip on what I might be missing or doing wrong,
+//even though this has nothing to do with the actual assignment.
 
-//creating a findByArtist function which inputs an artist name and returns any matches found after looping through the collection
+//Creating a findByArtist function which inputs an artist name and returns any matches found after looping through the collection.
+//If there are no matches, the search returns an empty array.
 function findByArtist(artist) {
   let searchResult = [];
   for (let item of collection) {
@@ -204,11 +203,11 @@ function findByArtist(artist) {
 
   console.log(searchResult);
 }
-//testing the function with an artist that is represented in the collection, and with one that is not.
+//Testing the function with an artist that is represented in the collection, and with one that is not.
 findByArtist('The Beatles');
 findByArtist('Ted Nugent');
 
-//creating a function to search the collection by artist, year, and track name, with an array to hold the results.
+//Creating a function to search the collection by artist, year, and track name, with an array to hold the results.
 function search(artist, year, trackName) {
   let results = [];
   let searchObject = {
@@ -216,8 +215,8 @@ function search(artist, year, trackName) {
     searchYear: year,
     trackName: trackName
   }
-  //if no search parameter is defined, the function returns the entire collection.
-  //if the none of the search parameters are found to match in the collection, the search returns an empty array.
+  //If no search parameter is defined, the function returns the entire collection.
+  //If the none of the search parameters are found to match in the collection, the search returns an empty array.
   if (searchObject.searchArtist === undefined && searchObject.searchYear === undefined && searchObject.trackName === undefined) {
     return collection;
   } else {
@@ -234,9 +233,10 @@ function search(artist, year, trackName) {
   }
   return results;
 }
-//testing for parameters that will not be found in the collection
+//Testing with parameters that will not be found in the collection.
 console.log(search('Ray Charles', '1957'));
-//testing an empty search
+//Testing an empty search.
 console.log(search());
-//a commented test for parameters that will be found in the collection; it looks horrible when printed.
+//Below is a commented test for parameters that will be found in the collection; it is successful but looks horrible when printed -
+//therefore I am leaving it out.
 //console.log(search('Carole King', '1971'))
