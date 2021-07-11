@@ -151,9 +151,9 @@ console.log(addToCollection('Revolver', 'The Beatles', '1966', tracksRevolver));
 console.log(addToCollection('Tapestry', 'Carole King', '1971', tracksTapestry));
 console.log(addToCollection('The Edited White Album', 'The Beatles', '2021', tracksEditedWhiteAlbum));
 //Timeouthis will end up logging a redundant copy of the collection in the log but for the assignment purpose, it was successful.
-//Testing this function here just to see what it does - it should print the collection.
-//Tonsole.log(search());
-//Commented it out just to clean up the log.
+//Testing this function in this random spot just to see what it does - it should print the collection.
+//Console.log(search());
+//Commented it out keep the log organized and clean.
 //Creating a showCollection function to list the items we've added, including all their property information in a neatly ordered way.
 function showCollection(collection) {
 
@@ -234,7 +234,7 @@ function search(artist, year, trackName) {
   return results;
 }
 //Testing with parameters that will not be found in the collection.
-console.log(search('Ray Charles', '1957'));
+console.log(search('Ray Charles', '1957')); 
 //Testing an empty search.
 console.log(search());
 //Below is a commented test for parameters that will be found in the collection; it is successful but looks horrible when printed -
